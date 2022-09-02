@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+* {
+    margin: 0;
+}
+
+:root {
+    --bg: hsl(225, 100%, 94%);
+    --cardBg: hsl(0, 0%, 100%);
+    --priceSection: hsl(225, 100%, 98%);
+    --button-changeP: hsl(245, 75%, 52%);
+    --h2-activeCancel: hsl(223, 47%, 23%);
+    --summaryP: hsl(224, 23%, 55%);
+}
+
+body {
+    background-image: url(pattern-background-desktop.svg);
+    background-repeat: repeat-x;
+    background-position: -300px -70px;
+    background-color: var(--bg);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.card {
+    background-color: var(--cardBg);
+    position: relative;
+    border-radius: 0 0 10px 10px;
+    font-family: 'Red Hat Display', sans-serif;
+    padding: 30px 30px 0 30px;
+    margin: 100px 0 0 0;
+}
+
+.hero {
+    border-radius: 10px 10px 0 0;
+    position: absolute;
+    top: -145px;
+    left: 0px;
+}
+
+.summary {
+    text-align: center;
+}
+
+.summaryH2 {
+    font-weight: 900;
+    font-size: 18px;
+    color: var(--h2-activeCancel);
+    padding-bottom: 10px;
+}
+
+.summaryP {
+    font-weight: 500;
+    font-size: 12px;
+    color: var(--summaryP);
+    padding: 0 0 20px 0;
+}
+
+.price {
+    background-color: var(--priceSection);
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.iconMusic {
+    width: 35px;
+}
+
+.priceGrid {
+    padding: 0 30px 0 10px;
+    font-size: 14px;
+}
+
+.priceP1 {
+    font-weight: 900;
+    color: var(--h2-activeCancel);
+}
+
+.priceP2 {
+    font-weight: 500;
+    color: var(--summaryP);
+}
+
+.changePlan {
+    font-weight: 500;
+    font-size: 12px;
+    padding: 0 0 0 30px;
+    text-decoration: underline;
+    color: var(--button-changeP);
+}
+
+.changePlan:hover {
+    cursor: pointer;
+    text-decoration: none;
+    opacity: 70%;
+}
+
+.button {
+    width: 268px;
+    padding: 10px 30px 10px 30px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 14px;
+    background-color: var(--button-changeP);
+    border: 0;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px var(--summaryP);
+    margin: 20px 0 25px 0;
+    color: var(--cardBg);
+}
+
+.button:hover {
+    cursor: pointer;
+    opacity: 70%;
+}
+
+.cancel {
+    text-align: center;
+    font-weight: 700;
+    color: var(--summaryP);
+    font-size: 14px;
+    margin-bottom: 35px;
+}
+
+.cancel:hover {
+    cursor: pointer;
+    color: var(--h2-activeCancel);
+    font-weight: 900;
+}
+
+footer {
+    position: absolute;
+    text-align: center;
+    bottom: 0;
+    max-width: fit-content;
+}
+
+footer > a, a:visited, a:hover {
+    color: var(--button-changeP);
+}
+
+@media screen and (max-width: 375px) {
+    body {
+        background-image: url(pattern-background-mobile.svg);
+    }
+    
+    .card {
+        max-width: 300px;
+    }
+
+
+}
